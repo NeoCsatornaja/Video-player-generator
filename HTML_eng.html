@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+  <html>
+
+    <head>
+	  <meta name="description" content="This is a simplest tools for video play. 
+	  Just give the necessary datas and embed the code where you want.">
+	  <meta property="og:title" content="Video.js HTML File Generator">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="http://neocsatblog.mblx.hu/HTML_generator/HTML_eng.html">
+      <meta property="og:image" content="http://neocsatblog.mblx.hu/HTML_generator/video.jsogimage.png">
+      <meta property="og:site_name" content="Video.js HTML File Generator">
+      <meta property="fb:admins" content="100000446876505">
+      <meta property="fb:app_id" content="238446939682606">
+	  <meta property="og:description" content="This is a simplest tools for video play. 
+	  Just give the necessary datas and embed the code where you want. Now included Youtube support!">
+      <meta name="keywords" content="Video.Js File Generator, HTML generator for video.js,Video player,embed video player online, online video player,online Youtube HTML5 player, HTML5, HTML5 player,Video.Js .HTML File Generator">
+      <meta name="robots" content="index, follow">
+      <meta name="revisit-after" content="3 Months">
+      <meta name="author" content="Neo">
+      <meta name="copyright" content="Copyright Neo Csatornája 2014">
+      <meta name="distribution" content="global">
+      <meta name="language" content="HU"> 
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="rating" content="general">
+	  <link rel="shortcut icon" type="image/png" href="magickstick.png" /> 
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.4.css">
+	  <link rel="stylesheet" type="text/css" href="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/css/lightview/lightview.css">
+      <title>Video.js HTML File Generator</title>
+	  <script src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/jquery.js"></script>
+	  <script type="text/javascript" src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/css/lightview/swfobject.js"></script>
+	  <script type="text/javascript" src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/js/spinners/spinners.min.js"></script>
+	  <script type="text/javascript" src="http://www.neocsatblog.mblx.hu//wp-content/plugins/lightview/js/lightview/lightview.js"></script>
+	  <script src="jquery.js"></script>
+	  <script src="jquery-ui-1.10.4.js"></script>
+	  <script>
+        $(function() {
+          var availableTags = [
+            "http://",
+			".hu",
+			".com",
+			".com.hu",
+			".mblx.hu",
+			"/embeds",
+			"neocsatblog.mblx.hu",
+			".mp4",
+			"embeds",
+			".html"
+			
+    ];
+   $( "#src_field" )
+      // don't navigate away from the field on tab when selecting an item
+      .bind( "keydown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).data( "ui-autocomplete" ).menu.active ) {
+          event.preventDefault();
+        }
+      })
+      .autocomplete({
+        minLength: 0,
+        source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+            availableTags, extractLast( request.term ) ) );
+        },
+        focus: function() {
+          // prevent value inserted on focus
+          return false;
+        },
+        select: function( event, ui ) {
+          var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( " " );
+          return false;
+        }
+      });
+  });
+  
+  
+  function split( val ) {
+      return val.split( /\s*/ );
+    }
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+	
+  
+  
+  $(function() {
+    $( ".lv_bubble" ).resizable();
+  });
+  </script>
+	  <script>
+
+
+      function setsrc(){
+	var src = document.getElementById("src_field").value;
+	
+	document.getElementById("iframe_field").value = '<iframe src="'+src+'" allowfullscreen style="overflow-x: hidden; overflow-y: hidden;" width="730" height="569" src="" frameborder="0"></iframe>';
+}
+
+
+
+</script>
+<script type="text/javascript" src="/HTML_generator/respmenu/rmm-js/responsivemobilemenu.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	 <link rel="stylesheet" href="/HTML_generator/respmenu/rmm-css/responsivemobilemenu.css" type="text/css"/>
+    </head>
+
+  <body>
+  <div id="laguage">
+    <p>Váltás magyar nyelvre: <a href="index.html"><img id="hun_flag" src="hun.jpg"></a>
+  </div>
+    <form id="videopontjsform" action="feldolgozo.php"method="post" ><br>
+	&nbsp;<img style="width: 162px;" src="video.jslogo.png">
+	  <div align="center">
+      <p>&nbsp; Source*</p><br>
+      <input required class="videojsform"  placeholder="The Video Source" type="url" id="a" name="a"><br>
+      <p> &nbsp; The Video poster*</p><br>
+      <input class="videojsform" required placeholder="The Video poster" type="url" id="b" name="b"><br>
+	  <p> &nbsp; Video subtitle(.vtt format)<p><br>
+	  <p>Hungarian subtitle:</p><br>
+      <input class="videojsform" type="text" placeholder="Hungarian subtitle (if you have it)" name="felirat_magyar"><br>
+	  <p>English Subtitle</p>
+	  <input class="videojsform" placeholder="English Subtitle (if you have it)" type="text" name="felirat_angol"><br>
+	  <p><u>The "*" fields required</u></p><br><br>
+      <input type="submit" id="generate" value="Generate!" name="generate">
+	  </div>
+	
+    </form>
+	<div class="youtube_search">
+	  <form id="youtube_form" action="youtube_feldolgozo.php"method="post" ><br>
+	    &nbsp;<img src="youtubelogo.png">
+		<div align="center">
+        <p> &nbsp; Youtube video*</p><br>
+        &nbsp;<input required placeholder="Youtube video source" class="youtubeinput" type="url" id="youtubelink" name="youtubelink"><a class="lightview" href="http://neocsatblog.mblx.hu/youtube.html"><img id="nagyito" src="/HTML_generator/images/nagyito.png"></a><br>
+        <p>&nbsp; The Youtube Video poster</p><br>
+        &nbsp;<input placeholder="The Youtube Video poster" type="url"class="youtubeinput" id="youtubeposter" name="youtubeposter"><br>
+		<p>&nbsp; Subtitle for video (.vtt format)</p><br>
+		<p>Hungarian subtitle</p><br>
+		&nbsp;<input placeholder="Hungarian subtitle"class="youtubeinput" type="text" name="youtubefelirat_magyar"><br>
+		<p>English Subtitle</p><br>
+		&nbsp;<input class="youtubeinput" placeholder="English Subtitle (if you have it)" type="text" name="youtubefelirat_angol"><br><br>
+        <p><u>A The "*" fields required!</u></p>
+		<input type="submit" id="generate" value="Generate!" name="generate"><br><br><br>
+	  </form><br><br><br>
+      </div>
+	</div>
+	
+	<div id="embed_code">
+	<b><h2>Important!:<br>
+	 The normal, video.js player,just mp4 files play!
+	</h2></b>
+	<h3><u>Embed method:</u></h3>	
+	 <p>1.) Fill the inputs. <br>
+	 2.) Press Generate button and save the file. <br>
+	 3.) Give the full url to the embed input box (http://) and click for the second area and select code & copy for where you want to the player.<br></p><br>
+	<p>Give the .html file URL here:</p>
+	<div class="ui-widget">
+	<input placeholder="The .html file path"  type="text" name="src_field" id="src_field" onblur="javascript: setsrc(); return false;" onclick="javascript: setsrc(); return false;" onChange="javascript: setsrc(); return false;" onKeyup="javascript: setsrc(); return false;"/>
+	</div>
+	<br>
+	<textarea width="1039px"  onclick="this.focus();this.select()"  onpaste="this.focus();this.select()" onclick="this.focus();this.select()"  id="iframe_field"><iframe allowfullscreen style="overflow-x: hidden; overflow-y: hidden;"  height="569" src="" frameborder="0"></iframe>
+     </textarea><br><br><br>
+     <a href="index.html">Reset forms</a>       
+	</div>
+		<!-- AddThis Button BEGIN -->
+<div id="adthis" style="margin-top: 275px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e98790b4fb8caca"></script>
+<!-- AddThis Button END -->
+    <div id="kereses" class="rmm"data-menu-title = "Eszközök a lejátszóhoz">
+            <ul>
+                <li><a class="lightview" href ="http://www.bing.com/?scope=images&FORM=Z9LH1">Search image for video</a></li>
+                <li><a class="lightview" href="http://neocsatblog.mblx.hu/youtube.html">Search on Youtube</a></li>
+                <li><a href="https://atelier.u-sub.net/srt2vtt/" class="lightview">.srt-->.vtt</a></li>
+                <li><a class="lightview" href="http://subtitle-horse.com/">Make subtitle for video!</a></li>
+                <li><a class="lightview" href="http://video.online-convert.com/convert-to-mp4">Convert video to mp4</a></li>
+            </ul>
+        </div><br><br><br><br><br><br><br><br><br><br>
+	<p><a target="_blank" href="http://neocsatblog.mblx.hu">Created by: Neo Csatornája &#169; 2014</a></p><br>
+	<p id="clear">Special thanks to Seraph and <a class="lightview" href="http://php.webprog.biz">Hörb</a></p>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&appId=435644979873772&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://neocsatblog.mblx.hu/HTML_generator/" data-numposts="5" data-colorscheme="dark"></div>
+  </body>
+
+</html>

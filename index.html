@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+
+  <html>
+
+    <head>
+    <script src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/jquery.js"></script>
+	  <meta name="description" content="Egy egyszerű és könnyen kezelhető oldal, ahová beillesztheted a lejátszani kívánt mp4 videó elérési útját, majd betudod ágyazni a lejátszót oda ahova szeretnéd.">
+	  <meta property="og:locale" content="eng_Eng" />
+	  <meta property="og:title" content="Video.js HTML File Generator">
+      <meta property="og:type" content="Website">
+      <meta property="og:url" content="http://neocsatblog.mblx.hu/HTML_generator/index.html">
+      <meta property="og:image" content="http://neocsatblog.mblx.hu/HTML_generator/video.jsogimage.png">
+      <meta property="og:site_name" content="Video.js HTML File Generator">
+      <meta property="fb:admins" content="100000446876505">
+      <meta property="fb:app_id" content="238446939682606">
+	  <meta property="og:description" content="Ez egy egyszerű, és könnyen kezelhető oldal, ahová beillesztheted a lejátszani kívánt mp4 videó elérési útját, majd betudod ágyazni a lejátszót oda ahova szeretnéd">
+      <meta name="keywords" content="video.js file generátor, HTML generator for video.js,Videó lejátszó,beágyazható videó lejátszó, online player,online lejátszó, HTML5, HTML5 player, HTML 5 lejátszó,videó,felirat,videóhoz,.srt-->.vtt,srt konvertálása.vttre, .vtt convert">
+      <meta name="robots" content="index, follow">
+      <meta name="revisit-after" content="3 Months">
+      <meta name="author" content="Neo">
+      <meta name="copyright" content="Copyright Neo Csatornája 2014">
+      <meta name="distribution" content="global">
+      <meta name="language" content="HU"> 
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="rating" content="general">
+	  <meta name="title" content="page-title">
+      <title>Video.js HTML File Generator</title>
+	  <script src="jquery-ui-1.10.4.js"></script>
+	  <link rel="shortcut icon" type="image/png" href="magickstick.png" /> 
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.4.css">
+	  <script src="jquery.js"></script>
+	  <link rel="stylesheet" type="text/css" href="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/css/lightview/lightview.css">
+	  <script type="text/javascript" src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/css/lightview/swfobject.js"></script>
+	  <script type="text/javascript" src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/js/spinners/spinners.min.js"></script>
+	  <script type="text/javascript" src="http://www.neocsatblog.mblx.hu/wp-content/plugins/lightview/js/lightview/lightview.js"></script>
+	 <script type="text/javascript" src="/HTML_generator/respmenu/rmm-js/responsivemobilemenu.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	 <link rel="stylesheet" href="/HTML_generator/respmenu/rmm-css/responsivemobilemenu.css" type="text/css"/>
+   <link type="text/css" rel="stylesheet" href="/HTML_generator/vTip_v2/css/vtip.css" media="screen" />
+   <script type="text/javascript" src="/HTML_generator/vTip_v2/vtip.js"></script>
+	  <script>
+$(document).ready( function() {    $('#videoposter').addClass("vtip");});
+
+      function setsrc(){
+	var src = document.getElementById("src_field").value;
+	
+	document.getElementById("iframe_field").value = '<iframe src="'+src+'" allowfullscreen style="overflow-x: hidden; overflow-y: hidden;" width="730" height="569"  frameborder="0"></iframe>';
+}
+
+
+
+</script>
+
+	<script language="javascript" type="text/javascript">
+function removeSpaces(string) {
+ return string.split(' ').join('');
+}
+</script>
+<script>
+function trimSpaces(){
+	s = document.getElementById("iframe_field").value;
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+	document.getElementById("iframe_field").value = s;
+}
+
+function trimSpaces(){
+	s = document.getElementById("src_field").value;
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+	document.getElementById("src_field").value = s;
+}
+
+</script>
+<script>
+  function reload() {
+    var videourl = $('#videourl')[0].value;
+    var videoposter = $('#videoposter')[0].value;
+    $('#vid3').attr('poster', videoposter);
+    $('#vid3').attr('src', videourl);
+    videojs("vid3", {}, function(){
+        this.load();
+    });
+  }
+  function loadVideo() {
+    var vid = document.getElementById('vid3');
+    vid.src = document.getElementById('videosource').value;
+    vid.poster = document.getElementById('videoposter').value;
+}
+
+
+  </script>
+  
+  <!--Video.js-->
+   <!-- Base Player -->
+  <link href="/embeds/video-js.min.css" rel="stylesheet" />
+  <script src="/embeds/video.dev.js"></script>
+
+  <!-- Plugins -->
+  <link href="/embeds/videojs.addThis.css" rel="stylesheet" />
+  <script src="/embeds/videojs.addThis.js"></script>
+
+<style type="text/css">
+  .vjs-default-skin { color: #d9d0d0; }
+  .vjs-default-skin .vjs-play-progress,
+  .vjs-default-skin .vjs-volume-level { background-color: #ff0000 }
+  .vjs-default-skin .vjs-control-bar,
+  .vjs-default-skin .vjs-big-play-button { background: rgba(0,0,0,0.51) }
+  .vjs-default-skin .vjs-slider { background: rgba(0,0,0,0.17) }
+  .vjs-big-play-button {
+  margin-left: 236px;
+  margin-top: 66px;
+  background: rgba(0, 0, 0, 1) !important;
+  width: 93px!important;
+height: 72px!important;
+}
+  }
+.vjs-big-play-button:hover{
+ background: rgba(192, 40, 40, 0.97)!important;
+}
+
+
+
+.videojsposter {
+  position: relative;
+  text-decoration: none;
+}
+.videojsposter:hover:before {
+  display: block;
+  position: absolute; 
+  padding: .5em;
+  content: attr(title);
+  min-width: 120px;
+  text-align: center;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  top: -32px;
+  background: rgba(0,0,0,.8);
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;    
+  color: #fff;
+  font-size: .86em;
+}
+.videojsposter:hover:after {
+  position: absolute;
+  display: block;
+  content: "";  
+  border-color: rgba(0,0,0,.8) transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height:0;
+  width:0;
+  position:absolute;
+  top: -8px;
+  left:1em;
+}
+</style>
+  <!--/video.js end-->  
+  <script src="http://neocsatblog.mblx.hu/videojs-youtube/videojs-youtube-master/src/youtube.js"></script>
+    </head>
+
+  <body>
+  <div id="laguage">
+    <p>Change language: <a href="HTML_eng.html"><img id="eng_flag" src="eng.png"></a>
+  </div>
+    <form id="videopontjsform" action="feldolgozo.php"method="post" ><br>
+	&nbsp;<img src="video.jslogo.png">
+	  <div align="center">
+      <p>&nbsp; Forrás*</p><br>
+      <input required class="videojsform" onkeypress="reload();" onKeyup="javascript:loadVideo()"  placeholder="A videó forrása" type="url" id="videourl" name="a"><br>
+      <p> &nbsp; A Videó posztere*</p><br>
+      <input title="Optimális méret: 640x(szélesség) 267(magasság)" class="videojsform" onkeypress="reload();" onKeyup="javascript:loadVideo()" required placeholder="A videó posztere" type="url" id="videoposter" name="b"><a class="lightview" href="http://www.bing.com/?scope=images&FORM=Z9LH1"><img id="nagyito2" src="http://neocsatblog.mblx.hu/HTML_generator/images/nagyito.png"></a>
+	  <p> &nbsp; Videóhoz felirat(.vtt formátum)<p><br>
+	  <p>Magyar felirat:</p><br>
+      <input class="videojsform" type="text" placeholder="Magyar felirat (ha van)" name="felirat_magyar"><br>
+	  <p>Angol felirat</p>
+	  <input class="videojsform" placeholder="Angol felirat a videókhoz" type="text" name="felirat_angol"><br>
+	  <p><u>A csillaggal jelölt mezők kitöltése kötelező!</u></p><br><br>
+      <input type="submit" id="generate" value="Generate!" name="generate">
+	  </div>
+	
+    </form>
+	<div class="youtube_search">
+	  <form id="youtube_form" action="youtube_feldolgozo.php"method="post" ><br>
+	    &nbsp;<img src="youtubelogo.png">
+		<div align="center">
+        <p> &nbsp; Youtube videó*</p><br>
+        &nbsp;<input required placeholder="A videó forrása" onKeyup="javascript:loadVideo()" onkeypress="reload();"  class="youtubeinput" type="url" id="videourl" name="youtubelink"><a class="lightview" href="http://neocsatblog.mblx.hu/youtube.html"><img id="nagyito" src="/HTML_generator/images/nagyito.png"></a><br>
+        <p>&nbsp; A Youtube Videó posztere</p><br>
+        &nbsp;<input placeholder="A videó posztere" onkeypress="reload();" onKeyup="javascript:loadVideo()"  type="url"class="youtubeinput" id="videoposter" name="youtubeposter"><a class="lightview" href="http://www.bing.com/?scope=images&FORM=Z9LH1"><img id="nagyito" src="http://neocsatblog.mblx.hu/HTML_generator/images/nagyito.png"></a><br>
+		<p>&nbsp; Videóhoz felirat(.vtt formátum)</p><br>
+		<p>Magyar felirat</p><br>
+		&nbsp;<input placeholder="Magyar felirat a videókhoz"class="youtubeinput" type="text" name="youtubefelirat_magyar"><br>
+		<p>Angol felirat</p><br>
+		&nbsp;<input class="youtubeinput" placeholder="Angol felirat a videókhoz" type="text" name="youtubefelirat_angol"><br><br>
+        <p><u>A csillaggal jelölt mezők kitöltése kötelező!</u></p>
+		<input type="submit" id="generate" value="Generate!" name="generate"><br><br><br>
+	  </form><br><br><br>
+      </div>
+	</div>
+	
+	<div id="embed_code">
+	<b><h2 id="important">Fontos:<br>
+	 A normál, video.js lejátszó kizárólag csak .mp4 fájlokat támogat!
+	</h2></b>
+	<h3><u>Beágyazás menete:</u></h3>	
+	 <p id="leiras">1.) Töltsd ki az adatokat. <br>
+	 2.) Nyomj rá a Generate gombra, és mentsd el a fájlt.<br>
+	 3.) Add meg, hová mentetted el a fájlt, teljes elérési úttal (http://), kattints bele a második mezőbe, és jobb egér gomb másolással, másold ki a kódot.<br>
+	 Ezt követően, már csak be kell illesztened oda a lejátszót, ahová szeretnéd, hogy megjelenjen.</p><br><br>
+	<p id="html-title">Üsd be ide a .html fájl elérési útját.</p>
+	<div class="ui-widget">
+	<input  onblur="this.value=removeSpaces(this.value);" placeholder="A html file helye"  type="text" name="src_field" id="src_field" onblur="javascript: setsrc(); return false;" onclick="javascript: setsrc(); return false;this.value=removeSpaces(this.value);" onChange="javascript: setsrc(); return false; this.value=removeSpaces(this.value);" onKeyup="javascript: setsrc(); return false; this.value=removeSpaces(this.value);" />
+	</div>
+	<br>
+	<textarea width="1039px"  onclick="this.focus();this.select()"  onpaste="this.focus();this.select()" onclick="this.focus();this.select()"  id="iframe_field"><iframe allowfullscreen style="overflow-x: hidden; overflow-y: hidden;"  height="569"  frameborder="0"></iframe>
+     </textarea><br><br><br>
+     <a href="index.html">Alaphelyzetbe állítás</a><br>
+     <iframe id="tutorial" src="https://www.youtube.com/embed/f5nqXTPprHk" allowfullscreen style="overflow-x: hidden; overflow-y: hidden;margin-left: 264px " frameborder="0"></iframe>	 
+	</div>
+	<!-- AddThis Button BEGIN -->
+<div id="adthis" style="margin-top: 122px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e98790b4fb8caca"></script>
+<!-- AddThis Button END -->
+	<div id="videojs"></div>
+	<div id="kereses" class="rmm"data-menu-title = "Eszközök a lejátszóhoz">
+            <ul>
+                <li><a class="lightview" href ="http://www.bing.com/?scope=images&FORM=Z9LH1">Képkereső a videóhoz</a></li>
+                <li><a class="lightview" href="http://neocsatblog.mblx.hu/youtube.html">Keresés youtubeon</a></li>
+                <li><a href="https://atelier.u-sub.net/srt2vtt/" class="lightview">.srt-->.vtt</a></li>
+                <li><a class="lightview" href="http://subtitle-horse.com/">Felirat készítése a videóhoz</a></li>
+                <li><a class="lightview" href="http://video.online-convert.com/convert-to-mp4">Videó konvertálása mp4be</a></li>
+            </ul>
+        </div>
+    <br><br><br><br><br><br><br><br><br><br><!--
+	<p>Videó előnézeti képe, fejlesztés alatt!</p><br>
+	<video id="vid3" controls preload="none" poster="" class="video-js vjs-default-skin" data-setup='{ "techOrder": ["flash"] }'>
+        <source src="" type='video/mp4'>
+    </video><button onclick="reload();">Post</button>
+
+  <script>
+    videojs("vid3", {
+            height: 267,
+            width: 640,
+            plugins: {
+                addThis: {
+                  reddit: false,
+                  delecious: false,
+                  website_url: "http://www.neocsatblog.mblx.hu",
+                  embed: true
+                }
+            }
+        }, function(){
+        // Player (this) is initialized and ready.
+    });
+  </script>
+<script src='/embeds/videojs.urlparams.js'></script>
+<script>
+// initialize video.js
+var video = videojs('vid3');
+
+// read in URL parameters and apply them
+video.urlparams();
+
+</script>-->
+	<p><a target="_blank" href="http://neocsatblog.mblx.hu">Készítette: Neo Csatornája &#169; 2014</a></p><br>
+	<a target="_blank" rel="author" href="https://plus.google.com/+NeoCsatorn%C3%A1ja" id="gplus"><img style="hover:box-shadow: 0px 7px 61px #CF4331, inset 0px 0px 1px #CF4331;" id="gplus" title="Google Plus" alt="Google Plus" src="/kep/gplus.png"></a>  <a  target="_blank" id="fb" href="https://www.facebook.com/NeoCsatornaja"><img id="fb" title="Facebook" alt="Facebook" src="/kep/facebook.png"></a>  <a target="_blank" id="twitter" href="https://twitter.com/Neocsatornaja"><img id="twitter" title="Twitter" alt="Twitter" src="/kep/twitter.png"></a>
+	<p id="clear">Külön köszönet Seraphnak és <a class="lightview" href="http://php.webprog.biz">Hörbnek</a></p>
+     <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&appId=238446939682606&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="fb-comments" data-href="http://neocsatblog.mblx.hu/HTML_generator/" data-numposts="5" data-colorscheme="dark"></div>
+
+  </body>
+
+</html>

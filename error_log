@@ -1,0 +1,24 @@
+[21-May-2014 19:48:32 Europe/Berlin] PHP Warning:  fopen(): Filename cannot be empty in /home/neocsat/public_html/HTML generator/feldolgozo.php on line 6
+[21-May-2014 19:48:32 Europe/Berlin] PHP Warning:  fpassthru() expects parameter 1 to be resource, boolean given in /home/neocsat/public_html/HTML generator/feldolgozo.php on line 7
+[21-May-2014 21:49:39 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'videojs' (T_STRING) in /home/neocsat/public_html/HTML generator/feldolgozo.php on line 63
+[21-May-2014 21:51:47 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'videojs' (T_STRING) in /home/neocsat/public_html/HTML generator/feldolgozo.php on line 63
+[21-May-2014 21:59:28 Europe/Berlin] PHP Parse error:  syntax error, unexpected '</script>' in /home/neocsat/public_html/HTML generator/feldolgozo.php on line 63
+[21-May-2014 22:42:05 Europe/Berlin] PHP Warning:  fwrite() expects parameter 1 to be resource, null given in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 75
+[21-May-2014 22:42:05 Europe/Berlin] PHP Warning:  fclose() expects parameter 1 to be resource, null given in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 76
+[21-May-2014 22:45:50 Europe/Berlin] PHP Warning:  fwrite() expects parameter 1 to be resource, null given in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 75
+[21-May-2014 22:45:50 Europe/Berlin] PHP Warning:  fclose() expects parameter 1 to be resource, null given in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 76
+[21-May-2014 22:47:21 Europe/Berlin] PHP Warning:  fwrite() expects parameter 1 to be resource, null given in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 75
+[21-May-2014 22:47:21 Europe/Berlin] PHP Warning:  fclose() expects parameter 1 to be resource, null given in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 76
+[21-May-2014 22:50:03 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 74
+[21-May-2014 22:50:40 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 74
+[21-May-2014 22:51:42 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 74
+[21-May-2014 22:52:03 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 74
+[22-May-2014 10:36:02 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 74
+[22-May-2014 11:12:58 Europe/Berlin] PHP Parse error:  syntax error, unexpected '{' in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 46
+[22-May-2014 11:53:07 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/neocsat/public_html/HTML_generator/feldolgozo.php:1) in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 3
+[22-May-2014 11:53:07 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/neocsat/public_html/HTML_generator/feldolgozo.php:1) in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 4
+[22-May-2014 11:59:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/neocsat/public_html/HTML_generator/feldolgozo.php:1) in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 2
+[22-May-2014 11:59:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/neocsat/public_html/HTML_generator/feldolgozo.php:1) in /home/neocsat/public_html/HTML_generator/feldolgozo.php on line 3
+[23-May-2014 01:43:01 Europe/Berlin] PHP Parse error:  syntax error, unexpected '=' in /home/neocsat/public_html/HTML_generator/youtube_feldolgozo.php on line 6
+[23-May-2014 01:43:47 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'techOrder' (T_STRING) in /home/neocsat/public_html/HTML_generator/youtube_feldolgozo.php on line 6
+[23-May-2014 02:50:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected '{' in /home/neocsat/public_html/HTML_generator/youtube_feldolgozo.php on line 58
