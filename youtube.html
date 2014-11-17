@@ -8,9 +8,7 @@
 
 <title>Youtube Instant with Jquery</title>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/
-
-ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 
 
 
@@ -34,7 +32,7 @@ var keyword= encodeURIComponent(search_input);
 
 
 
-var yt_url='http://gdata.youtube.com/feeds/api/videos?q='+keyword+'&format=5&max-results=1&v=2&alt=jsonc'; 
+var yt_url='https://gdata.youtube.com/feeds/api/videos?q='+keyword+'&format=5&max-results=1&v=2&alt=jsonc'; 
 
 
 
@@ -68,7 +66,7 @@ var video_viewCount=data.viewCount;
 
 
 
-var video_frame="<iframe width='640' height='385' src='http://www.youtube.com/embed/"+video_id+"' frameborder='0' type='text/html'></iframe>";
+var video_frame="<iframe width='640' height='385' src='https://www.youtube.com/embed/"+video_id+"' frameborder='0' type='text/html'></iframe>";
 
 
 
