@@ -1,4 +1,3 @@
 Git-hub-test-site
 =================
-
-I tryed learning git strukture, with my implamented website (http://videoplayergenerator.tk)
+The simpleast tool ever for embed a video player
