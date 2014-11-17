@@ -93,7 +93,7 @@ video.urlparams();
 
 </script>
 <script>
-videojs('vid3', { plugins: { loopbutton: true } });
+videojs("vid3", { plugins: { loopbutton: true } });
 </script>
 </body>
 </html>'; // ez egy példa html
